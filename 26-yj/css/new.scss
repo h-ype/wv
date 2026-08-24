@@ -124,7 +124,7 @@ $breakpoints: (
     }
 
     &:hover {
-        transform: translateY(6px);
+        transform: translateY(15px);
 
         @include media(md) {
             transform: translateX(-50%);
@@ -304,6 +304,9 @@ body {
             }
 
         }
+    }
+    [data-aos] {
+            transition-duration: 0.9s;
     }
 
     [class^='sec'] {
@@ -1073,7 +1076,6 @@ body {
         }
 
         .lead {
-            font-weight: 700;
             font-size: min(48px, 3.24vw);
             line-height: 1.42;
             letter-spacing: -0.03em;
@@ -1534,7 +1536,7 @@ body {
                         transform: translate(-50%, -50%);
                         width: 100%;
                         height: 100%;
-                        transition: all 0.2s;
+                        transition: all 0.8s;
                     }
 
                     &.on {
