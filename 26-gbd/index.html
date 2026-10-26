@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#fff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+    <!-- SEO 정보 입력-->
+    <title>한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전</title>
+    <meta name="description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+    <meta property="og:title" content="한국월드비전 공식홈 | 세계 최대 구호개발 NGO - 월드비전">
+    <meta property="og:description" content="한국월드비전은 지구촌 2억 명 어린이와 가족, 지역사회를 돕는 글로벌 NGO 입니다. 월드비전은 투명한 기부금을 약속합니다.">
+    <meta property="og:image" content="https://www.worldvision.or.kr/static/images/common/logo.webp">
+    <meta property="og:url" content="https://www.worldvision.or.kr/">
+    <link rel="canonical" href="//www.worldvision.or.kr">
+
+    <!-- //SEO 정보 입력 -->
+
+    <link rel="shortcut icon" href="https://www.worldvision.or.kr/static/images/common/favicon.ico">
+
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/jquery-ui.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/swiper.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/common.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/main.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/sub.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/module.css?v=20240226171940">
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/cmsModule.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/wv-add.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean"
+        rel="stylesheet">
+
+
+    <style>
+        #container .container {
+            min-height: 500px
+        }
+
+        [class^='box'] {
+            width: initial;
+            display: initial;
+            padding: initial;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/swiper.min.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/in-view.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/ui.js"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common/common.js?v=20240226171940">
+    </script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/common.js?v=20240226171940"></script>
+    <script type="text/javascript" src="https://www.worldvision.or.kr/static/js/cmsModule.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="https://www.worldvision.or.kr/static/css/section.css">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //타이틀 내용 엔터처리
+            $('.l-grid input[name=titleContents]').closest('.l-grid').each(function (i) {
+                var titleContents = $(this).find('input[name=titleContents]').val();
+                if (typeof titleContents != "undefined" && titleContents != '') {
+                    titleContents = titleContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=titleContentsPc]').append(titleContents);
+                    $(this).find('p[name=titleContentsMo]').append(titleContents);
+                }
+            });
+
+            //영상.내용 엔터처리
+            $('.l-grid input[name=videoContents]').closest('.l-grid').each(function (i) {
+                var videoContents = $(this).find('input[name=videoContents]').val();
+                if (typeof videoContents != "undefined" && videoContents != '') {
+                    videoContents = videoContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=videoContentsPc]').append(videoContents);
+                    $(this).find('p[name=videoContentsMo]').append(videoContents);
+                }
+            });
+
+            //텍스트상자.설명 엔터처리
+            $('.section-banner input[name=textContents]').closest('.section-banner').each(function (i) {
+                var textContents = $(this).find('input[name=textContents]').val();
+                if (typeof textContents != "undefined" && textContents != '') {
+                    textContents = textContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=textContentsPc]').append(textContents);
+                    $(this).find('p[name=textContentsMo]').append(textContents);
+                }
+            });
+            //텍스트상자.내용 엔터처리
+            $('.l-grid input[name=textPContents]').closest('.l-grid').each(function (i) {
+                var textPContents = $(this).find('input[name=textPContents]').val();
+                if (typeof textPContents != "undefined" && textPContents != '') {
+                    textPContents = textPContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=pContentsPc]').append(textPContents);
+                    $(this).find('p[name=pContentsMo]').append(textPContents);
+                }
+            });
+
+            //변화3단.내용 엔터처리
+            $('.section-banner input[name=changeContents]').closest('.section-banner').each(function (i) {
+                var changeContents = $(this).find('input[name=changeContents]').val();
+                if (typeof changeContents != "undefined" && changeContents != '') {
+                    changeContents = changeContents.replaceAll("\n", "<br/>")
+                    $(this).find('p[name=changeContentsPc]').append(changeContents);
+                    $(this).find('p[name=changeContentsMo]').append(changeContents);
+                }
+            });
+        });
+
+        //버튼클릭 링크이동 이벤트
+        function moveLink(flag, url) {
+            var setUrl = '';
+            if (url.includes('https')) {
+                setUrl = url;
+            } else {
+                setUrl = 'https://' + url
+            }
+
+            if (flag == '1') {
+                location.href = setUrl;
+            } else {
+                window.open(setUrl);
+            }
+        }
+
+        //플로팅 클릭이벤트
+        function clickArrow() {
+
+            var floatUrl = $("#floatUrl").val();
+            var floatTargetFlag = $("#floatTargetFlag").val();
+
+            var setUrl = '';
+            if (floatUrl.includes('https')) {
+                setUrl = floatUrl;
+            } else {
+                setUrl = 'https://' + floatUrl
+            }
+
+            if (floatTargetFlag == '1') {
+                location.href = setUrl;
+            } else {
+                window.open(setUrl);
+            }
+        }
+
+        $(function () {
+            $("#arrow").click(function () { });
+
+            /* 섹션 스와이퍼 */
+            var section_swiper = new Array();
+            $('.section_swiper').each(function (e) {
+                section_swiper[e] = new Swiper($(this).find('.swiper-container'), {
+                    //loop: true, /* loop: true 넣음 에러남 */
+                    pagination: {
+                        el: $(this).find('.progress_pagination'),
+                        type: "progressbar"
+                    },
+                    navigation: {
+                        nextEl: $(this).find('.btn_next'),
+                        prevEl: $(this).find('.btn_prev')
+                    },
+                    on: {
+                        init: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            $('.section_swiper').eq(e).find('.total').text(len);
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                            if (len == 1) {
+                                setTimeout(function () {
+                                    section_swiper[e].destroy();
+                                    $('.section_swiper').eq(e).find('.pag_wrap')
+                                        .hide();
+                                });
+                            }
+                        },
+                        update: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            $('.section_swiper').eq(e).find('.total').text(len);
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                            if (len == 1) {
+                                setTimeout(function () {
+                                    section_swiper[e].destroy();
+                                    $('.section_swiper').eq(e).find('.pag_wrap')
+                                        .hide();
+                                });
+                            }
+                        },
+                        slideChange: function () {
+                            var len = this.slides.length;
+                            var idx = this.activeIndex + 1;
+                            if (idx > len) {
+                                idx = 1;
+                            } else if (idx < 1) {
+                                idx = len;
+                            }
+                            $('.section_swiper').eq(e).find('.idx').text(idx);
+                        }
+                    }
+                });
+
+                /* //이미지 모듈 높이 값 제어
+                $('.section_swiper').each(function () {
+	
+                    var _length = $(this).find('.swiper-slide');
+                    var $target = _length.find('.caption');
+	
+                    if (_length.length > 1) {
+                        var $maxHeight = 0;
+	
+                        $target.each(function () {
+                            $thisHeight = $(this).height();
+	
+                            if ($thisHeight > $maxHeight) {
+                                $maxHeight = $thisHeight;
+                            }
+                        });
+                        $target.height($maxHeight);
+                    }
+                }); */
+            });
+
+        });
+    </script>
+
+    <script async="" src="https://script.hotjar.com/modules.3ba69200791f16077ba8.js" charset="utf-8"></script>
+    <script type="text/javascript" async=""
+        src="https://googleads.g.doubleclick.net/pagead/viewthroughconversion/651132761/?random=1708935699077&amp;cv=11&amp;fst=1708935699077&amp;bg=ffffff&amp;guid=ON&amp;async=1&amp;gtm=45be42l0za200&amp;gcd=13l3l3l3l1&amp;dma=0&amp;u_w=1920&amp;u_h=1080&amp;url=https%3A%2F%2Fwww.worldvision.or.kr%2Fparticipate%2FchurchVisionSunday&amp;ref=https%3A%2F%2Fwww.worldvision.or.kr%2FworldVisionIntro%2FintroInfo&amp;hn=www.googleadservices.com&amp;frm=0&amp;tiba=%EB%B9%84%EC%A0%84%EC%A3%BC%EC%9D%BC%20%7C%20%EC%B0%B8%EC%97%AC%ED%95%98%EA%B8%B0%20-%20%EC%9B%94%EB%93%9C%EB%B9%84%EC%A0%84&amp;npa=0&amp;pscdl=noapi&amp;auid=1947791541.1708906766&amp;uaa=x86&amp;uab=64&amp;uafvl=Chromium%3B122.0.6261.69%7CNot(A%253ABrand%3B24.0.0.0%7CGoogle%2520Chrome%3B122.0.6261.69&amp;uamb=0&amp;uap=Windows&amp;uapv=10.0.0&amp;uaw=0&amp;fledge=1&amp;data=event%3Dgtag.config&amp;rfmt=3&amp;fmt=4">
+        </script>
+
+
+    <!-- 추가 css js 입력 -->
+    <link href="css/new.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- //추가 css js 입력 -->
+
+</head>
+
+<body>
+
+    <div id="wrap">
+        <!-- top-menu -->
+        <div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/top-menu.html"></div>
+        <!-- //top-menu -->
+
+        <section id="container">
+            <!-- 컨텐츠 작업 영역 -->
+            <div class="gbd-haeun">
+                <div class="g_floating pc">
+                    <a href="" class="donate-btn" id="float_donation">
+                        <div class="txt">후원하고 <span>조명받기</span></div>
+                    </a>
+                </div>
+                <div class="g_floating mo">
+                    <a href="" class="donate-btn" id="float_donation">
+                        <div class="txt"><span>후원하고 조명받기</span></div>
+                    </a>
+                </div>
+                <div class="sec1">
+                    <div class="dummy"><img src="images/m_01.jpg" alt=""></div>
+                    <div class="inner">
+                        <div class="right">
+                            <h2 data-aos="fade-up"><img src="image/sec1_h2.webp" alt="아이의 하루를 밝히는 불빛"></h2>
+                            <h1 data-aos="fade-up" data-aos-delay="100"><img src="image/sec_h1.webp" alt=""></h1>
+                            <p data-aos="fade-up" data-aos-delay="200">따뜻한 온기가 필요한 요즘<br><strong><span>성해은</span>과 함께 <br>아이들의 하루를 밝혀 주세요</strong></p>
+                            <div class="bt-wrap" data-aos="fade-up" data-aos-delay="300">
+                                <a href="">
+                                    <span>후원하고 조명받기</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec2">
+                    <div class="dummy"><img src="images/m_02.jpg" alt=""></div>
+                    <div class="inner">
+                        <b data-aos="fade-up"><img src="image/sec2_logo.webp" alt=""></b>
+                        <h2 data-aos="fade-up" data-aos-delay="100">이건 그냥 <span>조명</span>이 아니에요</h2>
+                        <p data-aos="fade-up" data-aos-delay="200">
+                            이 작은 <strong>불빛</strong> 하나가 <br> <span>지구 반대편에 변화</span>를 만들 수 있어요
+                        </p>
+                    </div>
+                </div>
+                <div class="sec3">
+                    <div class="dummy"><img src="images/m_03.jpg" alt=""></div>
+                    <div class="sticky_wrap">
+                        <div class="left sticky">
+                        </div>
+                        <div class="right">
+                            <h2 data-aos="fade-up">
+                                힘든 하루 속에 <span>빛</span>을 <br>잃어가는 아이들을 본 적 있나요?
+                            </h2>
+                            <div class="story_swiper">
+                                <ul class="story_list">
+                                    <li class="story_item">
+                                        <figure><img src="image/sec3_rightImg1.jpg" alt="" class="pc">
+                                        <img src="image/sec3_rightImg1_m.jpg" alt="" class="mo"></figure>
+                                        <h3>종일 물 긷는 아이, 메리</h3>
+                                        <p>
+                                            <strong>새벽 일찍부터</strong> 우리 가족이 마실 물을 뜨러 가야 해요. <strong>6km를 걸으면 </strong><br>양동이가 너무 무거워서 <strong>머리가 아파요.</strong>
+                                        </p>
+                                    </li>
+                                    <li class="story_item">
+                                        <figure><img src="image/sec3_rightImg2.jpg" alt="" class="pc">
+                                        <img src="image/sec3_rightImg2_m.jpg" alt="" class="mo"></figure>
+                                        <h3>허기를 참고 잠드는 밤</h3>
+                                        <p>
+                                            흙이랑 나뭇가지를 가지고 놀다가 <strong>배가 고파서 일찍 잠에 들어요.</strong> <br>책도 읽어보고 싶고, <strong>엄마아빠도 보고 싶어요. </strong>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="story_pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec4">
+                    <div class="dummy"><img src="images/m_04.jpg" alt=""></div>
+                    <div class="inner">
+                        <div class="right">
+                            <h2 data-aos="fade-up">지금 저와 함께 <br><span>작은 불빛</span>을 켜주세요</h2>
+                            <p data-aos="fade-up" data-aos-delay="100">
+                                메리와 같은 아이들이 <br>
+                                홀로 두려움에 잠들지 않도록<br>
+                                우리가 함께 해 줄 수 있어요.<br>
+                            </p>
+                            <p data-aos="fade-up" data-aos-delay="200">
+                                후원에 참여해 주신 모든 분께<br>
+                                <strong>일광전구 SNOWMAN8 PORTABLE </strong><br>
+                                <strong>월드비전 에디션</strong>을 드립니다.
+                            </p>
+                            <div class="bt-wrap" data-aos="fade-up" data-aos-delay="300">
+                                <a href="">
+                                    <span>후원하고 조명받기</span>
+                                    <b><img src="image/sec4_btnarr.webp" alt=""></b>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec5">
+                    <div class="dummy"><img src="images/m_05.jpg" alt=""></div>
+                    <div class="inner top">
+                        <div class="left" data-aos="fade-up">
+
+                            <figure>
+                                <p class="pc">짠~ 선물이 도착했어요. <br>아이들에게도 멋진 하루를 <br>선물할 수 있대요!</p>
+                                <img src="image/sec5_img1.jpg" alt="" class="pc">
+                                <img src="image/sec5_img1_m.jpg" alt="" class="mo">
+                            </figure>
+                            <p class="mo">짠~ 선물이 도착했어요. <br>아이들에게도 멋진 하루를 선물할 수 있대요!</p>
+
+                        </div>
+                        <div class="right">
+                            <div class="title" data-aos="fade-up" data-aos-delay="100">
+                                <b>
+                                    <img src="image/sec5_logo.webp" alt="" class="pc">
+                                    <img src="image/sec5_logo_m.webp" alt="" class="mo">
+                                </b>
+                                <h2>월드비전 에디션 구성</h2>
+                            </div>
+                            <div class="content" data-aos="fade-up">
+                                <p>일광전구 SNOWMAN8 포터블 조명 <br>+ NEW 틴케이스, 엽서 2종</p>
+                                <ul>
+                                    <li data-aos="fade-up" data-aos-delay="200">
+                                        <figure><img src="image/sec5_img2.jpg" alt=""></figure>
+                                        <span>New case</span>
+                                    </li>
+                                    <li data-aos="fade-up" data-aos-delay="400">
+                                        <figure><img src="image/sec5_img3.jpg" alt=""></figure>
+                                        <span>Postcard</span>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inner bottom">
+                        <div class="left">
+                            <div class="title" data-aos="fade-up">
+                                <p>성해은과 함께 일상 속에서</p>
+                                <h2><img src="image/sec5_h2.webp" alt=""></h2>
+                            </div>
+                            <div class="content pc" data-aos="fade-up" data-aos-delay="200">
+                                <figure><img src="image/sec5_img4.jpg" alt=""></figure>
+                                <h4>
+                                    해은Pick!
+                                    <span>Tangerine</span>
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <figure data-aos="fade-up" data-aos-delay="400">
+                                <p class="pc">제 방에 불이 켜질 때마다 <br>마음도 환하게 채워지는 기분이에요.</p>
+                                <img src="image/sec5_img5.jpg" alt="" class="pc">
+                                <img src="image/sec5_img5_m.jpg" alt="" class="mo">
+                            </figure>
+                            <p class="mo">제 방에 불이 켜질 때마다 <br>마음도 환하게 채워지는 기분이에요.</p>
+                            <div class="content mo" data-aos="fade-up" data-aos-delay="400">
+                                <figure><img src="image/sec5_img4_m.jpg" alt=""></figure>
+                                <h4>
+                                    해은Pick!
+                                    <span>Tangerine</span>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec6">
+                    <div class="dummy"><img src="images/m_06.jpg" alt=""></div>
+                    <div class="pc">
+                        <ul>
+                            <li class="first" data-aos="fade-up">
+                                <h3>Bright Everywhere</h3>
+                                <h2>따듯한 온기가 필요한 곳 <br>어디든 함께 해보세요</h2>
+                            </li>
+                            <li><img src="image/sec6_img1.jpg" alt=""></li>
+                            <li><img src="image/sec6_img2.jpg" alt=""></li>
+                        </ul>
+                        <ul>
+                            <li><img src="image/sec6_img3.jpg" alt=""></li>
+                            <li><img src="image/sec6_img4.jpg" alt=""></li>
+                            <li><img src="image/sec6_img5.jpg" alt=""></li>
+                        </ul>
+                        <ul>
+                            <li><img src="image/sec6_img6.jpg" alt=""></li>
+                            <li><img src="image/sec6_img7.jpg" alt=""></li>
+                            <li><img src="image/sec6_img8.jpg" alt=""></li>
+                            <li class="last" data-aos="fade-up">
+                                <h2>후원에 참여하시면 <br>이 조명이 여러분의 <br>자리에도 도착해요.</h2>
+                                <div class="bt-wrap">
+                                    <a href="">
+                                        <span>후원하고 조명받기</span>
+                                        <b><img src="image/sec4_btnarr.webp" alt=""></b>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mo">
+                        <ul>
+                            <li class="first" data-aos="fade-up">
+                                <h3>Bright Everywhere</h3>
+                                <h2>따듯한 온기가 필요한 곳 <br>어디든 함께 해보세요</h2>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><img src="image/sec6_img1-1_m.jpg" alt=""></li>
+                            <li><img src="image/sec6_img1-2_m.jpg" alt=""></li>
+                        </ul>
+                        <ul>
+                            <li><img src="image/sec6_img2_m.jpg" alt=""></li>
+                        </ul>
+                        <ul>
+                            <li><img src="image/sec6_img3-1_m.jpg" alt=""></li>
+                            <li><img src="image/sec6_img3-2_m.jpg" alt=""></li>
+                        </ul>
+                        <ul class="last">
+                            <li><img src="image/sec6_img4_m.jpg" alt=""></li>
+                            <li class="last" data-aos="fade-up">
+                                <h2>후원에 참여하시면 <br>이 조명이 여러분의 <br>자리에도 도착해요.</h2>
+                                <div class="bt-wrap">
+                                    <a href="">
+                                        <span>후원하고 조명받기</span>
+                                        <b><img src="image/sec4_btnarr.webp" alt=""></b>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sec7">
+                    <div class="dummy"><img src="images/m_07.jpg" alt=""></div>
+                    <ul>
+                        <li data-aos="fade-up">
+                            <figure><img src="image/sec7_img1.jpg" alt=""></figure>
+                            <div class="text">
+                                <h3>Portable</h3>
+                                <p>85g의 초경량 무게 <br>언제 어디서든 아이들을 기억해요</p>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <figure><img src="image/sec7_img2.jpg" alt=""></figure>
+                            <div class="text">
+                                <h3>Tangerine</h3>
+                                <p>겨울을 녹이는 탠저린 빛, <br>아이들의 미소를 닮았어요</p>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="200">
+                            <figure><img src="image/sec7_img3.jpg" alt=""></figure>
+                            <div class="text">
+                                <h3>Magnetic + strap</h3>
+                                <p>마음 닿는 곳마다 연결되는 온기처럼 <br class="pc">어디든 손쉽게 연결해요</p>
+                            </div>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <figure><img src="image/sec7_img4.jpg" alt=""></figure>
+                            <div class="text">
+                                <h3>Easy Charging</h3>
+                                <p>C타입 케이블 하나로 간편충전 <br>아이들의 하루를 밝혀주세요</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec8">
+                    <div class="dummy"><img src="images/m_08.jpg" alt=""></div>
+                    <div class="inner">
+                        <div class="left">
+                            <h3 data-aos="fade-up">“누군가를 돕기 위해 시작한 일인데 <br><span>나를 더 행복하게</span> 만들어요”</h3>
+                            <p data-aos="fade-up" data-aos-delay="100">- 성해은 -</p>
+                            <div class="bt-wrap" data-aos="fade-up" data-aos-delay="200">
+                                <a href="">
+                                    <span>조명받고 아이들의 미래 밝혀주기</span>
+                                    <b><img src="image/sec4_btnarr.webp" alt=""></b>
+
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="sec9">
+                    <div class="dummy"><img src="images/m_09.jpg" alt=""></div>
+                    <div class="title">
+                        <h2 data-aos="fade-up">꾸준한 후원으로 함께해 주시는 <br class="mo">후원자님께 <br class="pc">
+                            <span>다른 색상의 <br class="mo">Magnet Strap 1개를</span> 추가로<br class="mo"> 보내드립니다.
+                        </h2>
+                        <p data-aos="fade-up" data-aos-delay="100">3개월 이상 꾸준히 후원해주시면 아이들의 하루에 더  <br class="mo">다양한 변화를 만들어 줄 수 있어요</p>
+
+                    </div>
+                    <div class="inner">
+                        <div class="left" data-aos="fade-up">
+                            <figure>
+                                <span>어디든 착! 붙여서 쓸 수 있어요.</span>
+                                <img src="image/sec9_leftImg.jpg" alt="" class="pc">
+                                <img src="image/sec9_leftImg_m.jpg" alt="" class="mo">
+                            </figure>
+                        </div>
+                        <div class="right" data-aos="fade-up" data-aos-delay="100">
+                            <span>변화를 의미하는 Color 랜덤 발송</span>
+                            <ul>
+                                <li>
+                                    <figure><img src="image/sec9_rightImg1.webp" alt=""></figure>
+                                    <div class="text">
+                                        <h4>Silver</h4><p>병원 건물</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <figure><img src="image/sec9_rightImg2.webp" alt=""></figure>
+                                    <div class="text">
+                                        <h4>White</h4><p>교복과 책</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <figure><img src="image/sec9_rightImg3.webp" alt=""></figure>
+                                    <div class="text">
+                                        <h4>Butter</h4><p>든든한 식사</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <figure><img src="image/sec9_rightImg4.webp" alt=""></figure>
+                                    <div class="text">
+                                        <h4>Ice Blue</h4><p>깨끗한 물</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="info">
+                        * 정기후원을 3개월 이상 꾸준히 유지해 주시면(후원금 3회 납입 이상), Magnet Strap 1개(색상 랜덤)를 선물로 보내드려요. <br>* 본 이벤트는 신규 정기후원자 대상으로 진행되며 조기 마감될 수 있습니다. 자세한 내용은 하단 FAQ를 확인해 주세요.
+                    </p>
+                </div>
+                <div class="sec10">
+                    <div class="dummy"><img src="images/m_10.jpg" alt=""></div>
+                    <h2 data-aos="fade-up">작은 빛이 모여 아이들의 삶에 <br class="mo">변화를 만듭니다</h2>
+                    <ul>
+                        <li data-aos="fade-up" data-aos-delay="100">
+                            <figure><img src="image/sec10_img1.jpg" alt="" class="pc"><img src="image/sec10_img1_m.jpg" alt="" class="mo"></figure>
+                            <strong>식수위생</strong>
+                            <p>깨끗한 물을 마실 수 있도록 안전한 <br class="pc">식수 환경을 만들어요.</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="300">
+                            <figure><img src="image/sec10_img2.jpg" alt="" class="pc"><img src="image/sec10_img2_m.jpg" alt="" class="mo"></figure>
+                            <strong>보건영양</strong>
+                            <p>아이들이 제때 끼니를 챙기고 <br class="pc">건강하게 자랄 수 있도록 영양 상태를 <br class="pc">개선하고 의료접근성을 높여요.</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="500">
+                            <figure><img src="image/sec10_img3.jpg" alt="" class="pc"><img src="image/sec10_img3_m.jpg" alt="" class="mo"></figure>
+                            <strong>교육</strong>
+                            <p>안정된 환경에서 아이들이 배움을 <br class="pc">이어갈 수 있도록 교육 환경을 지원해요.</p>
+                        </li>
+                        <li data-aos="fade-up" data-aos-delay="700">
+                            <figure><img src="image/sec10_img4.jpg" alt="" class="pc"><img src="image/sec10_img4_m.jpg" alt="" class="mo"></figure>
+                            <strong>생계자립</strong>
+                            <p>마을 사람들이 스스로 살아갈 수 있는 힘을 <br class="pc">기를 수 있도록 생계 역량을 키워요.</p>
+                        </li>
+                    </ul>
+                    <p data-aos="fade-up">
+                        보내주시는 소중한 후원금은 식수위생, 보건영양, 교육, 생계자립 등 <br class="pc">마을과 아이들을 살리는 지역개발사업을 위해 사용됩니다.
+                    </p>
+                </div>
+                <div class="sec11">
+                    <div class="dummy"><img src="images/m_11.jpg" alt=""></div>
+                    <div class="inner">
+                        <h2 data-aos="fade-up">FAQ</h2>
+                        <div class="faq" data-aos="fade-up" data-aos-delay="100">
+                            <div class="faq-item">
+                                <button type="button" class="faq-q">조명은 어떻게 받을 수 있나요?</button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">Give a bright day 캠페인을 통해 월드비전 해외사업을 정기후원하시면 정기후원 1건당 조명 1개를 발송해드립니다. <br>발송을 위해 후원 신청 시 배송 주소를 정확하게 입력해주세요. <br>주소 입력을 놓치셨다면 홈페이지 로그인 > 마이월드비전, 챗봇을 통해서도 입력하실 수 있습니다.</div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button type="button" class="faq-q">신청하면 언제 받아볼 수 있나요?</button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">후원금 결제 후 3주 내에 택배로 받아보실 수 있습니다. <br>첫 후원금이 납입되지 않았을 경우에는 조명이 발송되지 않습니다. <br>만약 그 이후에도 조명이 도착하지 않았다면 월드비전 상담센터(02-2078-7000)로 연락주세요.</div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button type="button" class="faq-q"> 제품을 수령하였는데 이상이 있어요. 어디로 연락해야 할까요?</button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">제품에 이상이 있을 시 일광전구 C/S센터로 문의부탁드립니다. (C/S센터 : 053-581-1076)</div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button type="button" class="faq-q">월드비전 에디션 구성은 어떻게 되나요? </button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">스노우맨8 포터블 조명을 새로운 원통형 틴케이스에 받아보실 수 있으며, 스노우맨 엽서 2종도 포함되어 있습니다.</div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button type="button" class="faq-q">조명 사이즈와 사양이 어떻게 되나요? </button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">· 사이즈 : 80x80x95mm <br>· 색상 : 탠저린 <br>· 무게: 85g <br>· 소재 : PC, PET, ABS, 실리콘, 마그넷 <br>· 소비전력 : Maxm 5W <br>· 램프 : LED(2700K, 5000K) <br>· 사용시간 : 100%-8H, 60%-20H, 10%-60H <br>Directed by ILKWANG LIGHTING (Made in China)</div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button type="button" class="faq-q">조명 사용법이 궁금해요. </button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">· 전원 & 빛 밝기조절 <br>바디의 원형 버튼을 짧게 터치하여 ON/OFF, 밝기 조절 <br>1회 터치 : 전원 ON, 밝기100% (최대8시간) <br>2회 터치 : 밝기60% (최대20시간) <br>3회 터치 : 밝기10% (최대60시간) <br>4회 터치 : 반딧불 모드 (최대12시간) <br>5회 터치 : 전원 OFF <br> <br>· 배터리 잔량 & 충전중 배터리 충전량 표시 <br>5% 이하 : 바디 Green LED 2회 점멸 <br>50% 이하 : 바디 Green LED 1회 점멸 <br>51%~90% : 바디 Green LED 2회 점멸 <br>91%~100% : 바디 Green LED 계속 점등 <br> <br>· 색온도 변환 <br>점등 상태에서 바디의 원형 버튼을 2초간 길게 터치하여 색온도 변환 <br>(2700K 전구색 - 5000K 주광색)</div>
+                                </div>
+                            </div>
+                            <div class="faq-item on">
+                                <button type="button" class="faq-q">월드비전에 이미 정기후원 중인데, 조명을 받고 싶어요. </button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">
+                                        월드비전 정기후원자시라면 일시후원을 통해 일광전구 스노우맨8 포터블 조명을 받으실 수 있으며, 일시후원금은 해외사업비로 사용됩니다. 더 많은 분들이 동참하실 수 있도록 선착순 100명으로 제한하오니 이 점 너그러이 양해를 부탁드립니다. <br>
+                                        <div class="bt-wrap">
+                                            <a href="">일시후원하기</a>
+                                        </div>
+                                        <small>*후원자 확인을 위해 로그인으로 연결됩니다.</small>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button type="button" class="faq-q"> 도킹스테이션 Magnet Strap은 어떻게 추가로 받을 수 있나요?</button>
+                                <div class="faq-a">
+                                    <div class="faq-a__text">정기후원금 납입 3회차가 확인되면 3주 내에 등록하신 주소지로 받아보실 수 있습니다. 후원 중단 시에는 발송되지 않습니다. <br>색상은 랜덤으로 Magnet Strap 1개를 추가로 선물드리며 자석이 내장되어 다양한 방법으로 사용할 수 있습니다. <br>본 이벤트는 신규 정기후원자 한정으로 진행되며, 기존 정기후원자 중에 일시후원으로 캠페인에 참여하신 후원자는 해당되지 않습니다.</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info">
+                            <p>이 캠페인은 <br>‘빛으로 세상을 이롭게’ <strong>일광전구</strong>와 함께합니다.</p>
+                            <b><img src="image/sec11_ilkw.webp" alt=""></b>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- //컨텐츠 작업 영역 -->
+        </section>
+    </div>
+    <!-- footer -->
+    <div data-include-path="https://gb.worldvision.or.kr/resources/wvFrt/project/template/inc/footer.html"></div>
+    <!-- //footer -->
+    </div>
+
+    <script>
+        AOS.init();
+
+
+        window.addEventListener('load', function () {
+            var allElements = document.getElementsByTagName('*');
+            Array.prototype.forEach.call(allElements, function (el) {
+                var includePath = el.dataset.includePath;
+                if (includePath) {
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            el.outerHTML = this.responseText;
+                        }
+                    };
+                    xhttp.open('GET', includePath, true);
+                    xhttp.send();
+                }
+            });
+        });
+
+
+        // 레이아웃 스크롤 모션
+        const observer = new IntersectionObserver((evt) => {
+            evt.forEach((item) => {
+                if (item.isIntersecting) item.target.classList.add('ob_af')
+            });
+        });
+
+        const scrEvt = document.querySelectorAll(".ob__, .ob__bottom, .ob__right, .ob__left, .ob__top");
+        scrEvt.forEach((item) => {
+            observer.observe(item);
+        });
+
+        // FAQ 아코디언: 질문 클릭 시 답변 토글, 형제 항목은 닫힘
+        $(".faq .faq-q").click(function () {
+            $(this).parent().toggleClass('on').siblings().removeClass('on');
+        });
+
+        // sec3 아동 스토리: PC는 좌측/타이틀 고정 후 스크롤에 따라 li 교체, 1024px 이하는 스와이프
+        (function () {
+            const $sec3 = document.querySelector('.sec3');
+            if (!$sec3) return;
+
+            const $sticky = $sec3.querySelector('.sticky_wrap');
+            const $title = $sec3.querySelector('.right h2');
+            const $box = $sec3.querySelector('.story_swiper');
+            const $list = $box.querySelector('.story_list');
+            const $pagination = $sec3.querySelector('.story_pagination');
+            const $items = $list.querySelectorAll('.story_item');
+            const mql = window.matchMedia('(max-width: 1024px)');
+            let storySwiper = null;
+            let distance = 0;
+
+            // li 개수만큼 섹션 높이를 늘려, 그 구간 동안 sticky 상태에서 li가 하나씩 교체됨
+            function measure() {
+                $sec3.style.height = '';
+                if (!mql.matches) {
+                    distance = window.innerHeight * 0.8 * ($items.length - 1);
+                    // 마지막 카드가 나온 뒤에도 고정된 채로 머무는 구간
+                    const hold = window.innerHeight * 1;
+                    // sticky 구간 = 섹션 높이 - .sticky_wrap 높이 이므로, distance + hold만큼 더해 고정 구간 확보
+                    $sec3.style.height = ($sticky.offsetHeight + distance + hold) + 'px';
+                    onScroll();
+                }
+                // PC: h2는 sticky 안에 있어 위치 계산이 스크롤에 따라 틀어지므로, 고정되지 않는 sec3 기준으로 트리거
+                if (mql.matches) {
+                    $title.removeAttribute('data-aos-anchor');
+                } else {
+                    $title.setAttribute('data-aos-anchor', '.sec3');
+                }
+                // sec3 높이가 바뀌면 아래 섹션들의 위치도 바뀌므로 AOS 트리거 위치 재계산
+                if (window.AOS) AOS.refresh();
+            }
+
+            function onScroll() {
+                if (mql.matches) return;
+                const progress = distance ? Math.min(Math.max(-$sec3.getBoundingClientRect().top / distance, 0), 1) : 0;
+                const active = Math.round(progress * ($items.length - 1));
+                $items.forEach(function (item, i) {
+                    item.classList.toggle('on', i === active);
+                    item.classList.toggle('prev', i < active);
+                });
+            }
+
+            function setMode() {
+                if (mql.matches) {
+                    if (!storySwiper) {
+                        storySwiper = new Swiper($box, {
+                            wrapperClass: 'story_list',
+                            slideClass: 'story_item',
+                            slidesPerView: 1.2,
+                            spaceBetween: 32,
+                            pagination: {
+                                el: $pagination,
+                                clickable: true
+                            }
+                        });
+                    }
+                    $items.forEach(function (item) {
+                        item.classList.remove('on', 'prev');
+                    });
+                } else if (storySwiper) {
+                    storySwiper.destroy(true, true);
+                    storySwiper = null;
+                }
+                measure();
+            }
+
+            setMode();
+            mql.addListener(setMode);
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', measure);
+            window.addEventListener('load', measure);
+        })();
+
+        const sections = document.querySelectorAll('.bg-animate');
+        sections.forEach(section => {
+            setInterval(() => {
+                section.classList.toggle('active');
+            }, 4000);
+        });
+
+        (function () {
+            const $floating = document.querySelector('.g_floating');
+            if (!$floating) return;
+
+            const purpleSectionSelectors = ['.sec3', '.sec4', '.sec7', '.sec8', '.sec9'];
+
+            const purpleSections = purpleSectionSelectors
+                .flatMap(sel => Array.from(document.querySelectorAll(sel)));
+
+            if (!purpleSections.length) return;
+
+            const activeSections = new Set();
+            const mql = window.matchMedia('(max-width: 1200px)');
+            let purpleObserver = null;
+
+            function createPurpleObserver() {
+                if (purpleObserver) purpleObserver.disconnect();
+                activeSections.clear();
+                $floating.classList.remove('purple');
+
+                // g_floating 위치: PC는 화면 상단, 1200px 이하(모바일)는 화면 하단
+                const rootMargin = mql.matches
+                    ? '-85% 0px -15% 0px'
+                    : '-50% 0px -50% 0px';
+
+                purpleObserver = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            activeSections.add(entry.target);
+                        } else {
+                            activeSections.delete(entry.target);
+                        }
+                    });
+
+                    $floating.classList.toggle('purple', activeSections.size > 0);
+                }, {
+                    root: null,
+                    rootMargin,
+                    threshold: 0
+                });
+
+                purpleSections.forEach((section) => purpleObserver.observe(section));
+            }
+
+            createPurpleObserver();
+            mql.addEventListener('change', createPurpleObserver);
+        })();
+
+        // g_floating.mo: sec1 하단이 화면 중앙을 지나면 노출, 다시 올라가면 숨김
+        (function () {
+            const $floatingMo = document.querySelector('.g_floating.mo');
+            const $sec1 = document.querySelector('.sec1');
+            if (!$floatingMo || !$sec1) return;
+
+            function onScroll() {
+                const passed = $sec1.getBoundingClientRect().bottom <= window.innerHeight / 2;
+                $floatingMo.classList.toggle('show', passed);
+            }
+
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+        })();
+
+    </script>
+
+</body>
+
+</html>
