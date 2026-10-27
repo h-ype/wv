@@ -107,10 +107,12 @@ body, html {
   left: max(-19px, -1.203vw);
   top: max(-51px, -3.228vw);
   width: min(212px, 13.418vw);
-  height: min(247px, 15.633vw);
-  background-image: url("../image/b_floating.webp");
+  height: min(246px, 15.633vw);
+  background-image: url("../image/b_floating_off.webp");
   background-size: 100%;
+  background-position: center bottom;
   background-repeat: no-repeat;
+  transition: all 0.2s;
 }
 .gbd-haeun .g_floating.pc a .txt {
   position: relative;
@@ -129,6 +131,9 @@ body, html {
 .gbd-haeun .g_floating.pc:hover {
   box-shadow: 0 0 min(60px, 3.797vw) rgba(255, 207, 156, 0.99);
   transform: translatey(8px);
+}
+.gbd-haeun .g_floating.pc:hover :before {
+  background-image: url("../image/b_floating_on.webp");
 }
 .gbd-haeun .g_floating.mo {
   opacity: 0;
@@ -153,6 +158,7 @@ body, html {
   content: "";
   background-image: url("../image/sec1_btn.webp");
   background-size: 100%;
+  background-position: left bottom;
   background-repeat: no-repeat;
   display: block;
   position: absolute;
@@ -303,7 +309,7 @@ body, html {
   .gbd-haeun .sec1 .inner .right .bt-wrap a:before {
     width: min(300px, 29.297vw);
     height: min(292px, 28.516vw);
-    left: min(108px, 10.547vw);
+    left: min(40px, 3.906vw);
   }
 }
 .gbd-haeun .sec1 .inner .right .bt-wrap a:hover {
@@ -397,9 +403,6 @@ body, html {
   position: relative;
 }
 .gbd-haeun .sec3 .sticky_wrap {
-  position: sticky;
-  top: 0;
-  height: 100vh;
   display: flex;
   align-items: flex-start;
   background-image: url("../image/sec3_bg.jpg");
@@ -417,13 +420,18 @@ body, html {
 }
 .gbd-haeun .sec3 .left {
   width: 50%;
-  height: 100%;
+  height: 100vh;
   background-position: right center;
   background-size: cover;
   background-image: url("../image/sec3_leftImg.jpg");
 }
+.gbd-haeun .sec3 .left.sticky {
+  position: sticky;
+  top: 0;
+}
 @media (max-width: 1024px) {
   .gbd-haeun .sec3 .left.sticky {
+    position: relative;
     width: 100%;
     height: min(950px, 92.773vw);
     flex-shrink: 0;
@@ -435,12 +443,8 @@ body, html {
 }
 .gbd-haeun .sec3 .right {
   width: 50%;
-  padding-left: min(80px, 5.063vw);
-  height: 100%;
+  padding: min(160px, 10.127vw) 0 min(160px, 10.127vw) min(80px, 5.063vw);
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec3 .right {
@@ -496,6 +500,7 @@ body, html {
 .gbd-haeun .sec3 ul {
   margin-top: min(80px, 5.063vw);
   display: grid;
+  row-gap: min(60px, 3.797vw);
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec3 ul {
@@ -508,19 +513,6 @@ body, html {
   background-color: #fff;
   border-radius: min(20px, 1.266vw);
   width: min(616px, 38.987vw);
-  grid-area: 1/1;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(60px);
-  transition: opacity 0.6s, transform 0.6s, visibility 0.6s;
-}
-.gbd-haeun .sec3 ul li.prev {
-  transform: translateY(-60px);
-}
-.gbd-haeun .sec3 ul li.on {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec3 ul li {
@@ -528,10 +520,6 @@ body, html {
     border-radius: min(30px, 2.93vw);
     flex-shrink: 0;
     box-sizing: border-box;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    transition: none;
   }
 }
 .gbd-haeun .sec3 ul li figure {
@@ -1108,7 +1096,7 @@ body, html {
 .gbd-haeun .sec6 ul li.last h2 {
   font-size: min(28px, 1.772vw);
   line-height: min(42px, 2.658vw);
-  color: #f9f6f2;
+  color: #fcf6ce;
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec6 ul li.last h2 {
@@ -1692,7 +1680,7 @@ body, html {
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec11 h2 {
-    font-size: min(65px, 6.348vw);
+    font-size: min(80px, 7.812vw);
   }
 }
 .gbd-haeun .sec11 .faq {
@@ -1727,10 +1715,13 @@ body, html {
 .gbd-haeun .sec11 .faq .faq-q {
   display: flex;
   flex: 1;
+  box-sizing: border-box;
+  text-decoration: none;
   padding: min(28px, 1.772vw) min(61px, 3.861vw) min(28px, 1.772vw) min(36px, 2.278vw);
   position: relative;
   width: 100%;
   font-size: min(24px, 1.519vw);
+  line-height: min(50px, 3.165vw);
   font-weight: 700;
   text-align: left;
   color: #401605;
@@ -1739,7 +1730,7 @@ body, html {
 @media (max-width: 1024px) {
   .gbd-haeun .sec11 .faq .faq-q {
     align-items: flex-start;
-    font-size: min(32px, 3.125vw);
+    font-size: min(36px, 3.516vw);
     line-height: min(50px, 4.883vw);
     padding: min(28px, 2.734vw) min(90px, 8.789vw) min(28px, 2.734vw) min(30px, 2.93vw);
   }
@@ -1748,8 +1739,9 @@ body, html {
   content: "Q.";
   display: inline-block;
   padding-right: min(35px, 2.215vw);
-  font-weight: 700;
   font-size: min(28px, 1.772vw);
+  line-height: min(50px, 3.165vw);
+  font-weight: 700;
   color: #b94c09;
 }
 @media (max-width: 1024px) {
@@ -1762,18 +1754,19 @@ body, html {
   content: "";
   position: absolute;
   right: min(61px, 3.861vw);
+  transform: translateY(-50%);
   top: 50%;
-  width: min(16px, 1.013vw);
-  height: min(16px, 1.013vw);
-  border-right: 3px solid #b94c09;
-  border-bottom: 3px solid #b94c09;
-  transform: translateY(-75%) rotate(45deg);
-  transition: transform 0.2s;
+  width: min(25px, 1.582vw);
+  height: min(25px, 1.582vw);
+  background-position: center center;
+  background-image: url("../image/sec10_arr.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec11 .faq .faq-q::after {
-    width: min(16px, 1.562vw);
-    height: min(16px, 1.562vw);
+    width: min(26px, 2.539vw);
+    height: min(26px, 2.539vw);
   }
 }
 .gbd-haeun .sec11 .faq .faq-item {
@@ -1792,8 +1785,8 @@ body, html {
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec11 .faq .faq-a {
-    font-size: min(32px, 3.125vw);
-    line-height: min(44px, 4.297vw);
+    font-size: min(36px, 3.516vw);
+    line-height: min(60px, 5.859vw);
   }
 }
 .gbd-haeun .sec11 .faq .faq-a::before {
@@ -1806,8 +1799,8 @@ body, html {
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec11 .faq .faq-a::before {
-    font-size: min(32px, 3.125vw);
-    line-height: min(44px, 4.297vw);
+    font-size: min(36px, 3.516vw);
+    line-height: min(60px, 5.859vw);
   }
 }
 .gbd-haeun .sec11 .faq .faq-a .faq-a__text {
@@ -1820,8 +1813,8 @@ body, html {
 }
 @media (max-width: 1024px) {
   .gbd-haeun .sec11 .faq .faq-a .faq-a__text {
-    font-size: min(32px, 3.125vw);
-    line-height: min(44px, 4.297vw);
+    font-size: min(36px, 3.516vw);
+    line-height: min(60px, 5.859vw);
   }
 }
 .gbd-haeun .sec11 .faq .faq-a .faq-a__text small {
@@ -1860,6 +1853,7 @@ body, html {
     font-size: min(26px, 2.539vw);
     padding-left: min(32px, 3.125vw);
     background-size: min(30px, 2.93vw);
+    background-position: right min(30px, 2.93vw) top 50%;
     width: min(260px, 25.391vw);
     height: min(72px, 7.031vw);
     line-height: min(69px, 6.738vw);
@@ -1869,7 +1863,7 @@ body, html {
   grid-template-rows: auto 1fr;
 }
 .gbd-haeun .sec11 .faq .faq-item.on .faq-q::after {
-  transform: translateY(-25%) rotate(-135deg);
+  transform: translateY(-34%) rotate(180deg);
 }
 .gbd-haeun .sec11 .faq .faq-item.on .faq-a {
   opacity: 1;

@@ -118,10 +118,12 @@ $breakpoints: (
                     left: max(-19px, -1.203vw);
                     top: max(-51px, -3.228vw);
                     width: min(212px, 13.418vw);
-                    height: min(247px, 15.633vw);
-                    background-image: url('../image/b_floating.webp');
+                    height: min(246px, 15.633vw);
+                    background-image: url('../image/b_floating_off.webp');
                     background-size: 100%;
+                    background-position: center bottom;
                     background-repeat: no-repeat;
+                    transition: all 0.2s;
                 }
                 .txt {
                     position: relative;
@@ -134,13 +136,16 @@ $breakpoints: (
                     text-align: center;
                     span {
                         display: block;
-                        color: #f8fc8c;
+                        color: #f8fc8c; 
                     }
                 }
             }
             &:hover {
                 box-shadow:0 0 min(60px, 3.797vw) rgba(255, 207, 156, 0.99);
                 transform: translatey(8px);
+                :before {
+                    background-image: url('../image/b_floating_on.webp');
+                }
             }
         }
         &.mo {
@@ -163,6 +168,7 @@ $breakpoints: (
                 content: "";
                 background-image:url('../image/sec1_btn.webp');
                 background-size: 100%;
+                background-position: left bottom;
                 background-repeat: no-repeat;
                 display: block;
                 position: absolute;
@@ -298,7 +304,7 @@ $breakpoints: (
                             @include media(md) {
                                 width: min(300px, 29.297vw);
                                 height: min(292px, 28.516vw);
-                                left: min(108px, 10.547vw);
+                                left: min(40px, 3.906vw);
                             }
                         }
                         &:hover {
@@ -389,11 +395,8 @@ $breakpoints: (
     }
     .sec3 {
         position: relative;
-        // PC: 섹션 높이는 JS가 카드 수만큼 늘리고, 그 구간 동안 .sticky_wrap이 화면에 고정됨
+        // PC: 좌측 이미지(.left)만 화면에 고정되고, 우측 스토리(.right)는 자연 스크롤됨
         .sticky_wrap {
-            position: sticky;
-            top: 0;
-            height: 100vh;
             display: flex;
             align-items: flex-start;
             background-image: url('../image/sec3_bg.jpg');
@@ -409,12 +412,15 @@ $breakpoints: (
         }
         .left {
             width: 50%;
-            height: 100%;
+            height: 100vh;
             background-position: right center;
             background-size: cover;
             background-image: url('../image/sec3_leftImg.jpg');
             &.sticky {
+                position: sticky;
+                top: 0;
                 @include media(md) {
+                    position: relative;
                     width: 100%;
                     height: min(950px, 92.773vw);
                     flex-shrink: 0;
@@ -427,12 +433,8 @@ $breakpoints: (
         }
         .right {
             width: 50%;
-            padding-left: min(80px, 5.063vw);
-            height: 100%;
+            padding: min(160px, 10.127vw) 0 min(160px, 10.127vw) min(80px, 5.063vw);
             box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
             @include media(md) {
                 padding: min(110px, 10.742vw) 0;
                 background-image: url('../image/sec3_bg2_m.jpg');
@@ -481,6 +483,7 @@ $breakpoints: (
         ul {
             margin-top: min(80px, 5.063vw);
             display: grid;
+            row-gap: min(60px, 3.797vw);
             @include media(md) {
                 display: flex;
                 margin-top: min(70px, 6.836vw);
@@ -490,28 +493,11 @@ $breakpoints: (
                 background-color: #fff;
                 border-radius: min(20px, 1.266vw);
                 width: min(616px, 38.987vw);
-                grid-area: 1 / 1;
-                opacity: 0;
-                visibility: hidden;
-                transform: translateY(60px);
-                transition: opacity 0.6s, transform 0.6s, visibility 0.6s;
-                &.prev {
-                    transform: translateY(-60px);
-                }
-                &.on {
-                    opacity: 1;
-                    visibility: visible;
-                    transform: translateY(0);
-                }
                 @include media(md) {
                     padding: min(40px, 3.906vw);
                     border-radius: min(30px, 2.930vw);
                     flex-shrink: 0;
                     box-sizing: border-box;
-                    opacity: 1;
-                    visibility: visible;
-                    transform: none;
-                    transition: none;
                 }
                 figure {
                     border-radius: min(10px, 0.633vw);
@@ -1036,7 +1022,7 @@ $breakpoints: (
                     h2 {
                         font-size: min(28px, 1.772vw);
                         line-height: min(42px, 2.658vw);
-                        color: #f9f6f2;
+                        color: #fcf6ce;
                         @include media(md) {
                             font-size:min(50px, 4.883vw);
                             line-height: 1.4;
@@ -1540,7 +1526,7 @@ $breakpoints: (
             text-align: center;
             font-size: min(55px, 3.481vw);
             @include media(md) {
-                font-size: min(65px, 6.348vw);
+                font-size: min(80px, 7.812vw)
             }
         }
         .faq {
@@ -1565,20 +1551,24 @@ $breakpoints: (
                     }
                 }
             }
+            // a 태그로 사용하므로 밑줄 제거, padding 포함 너비 계산
             .faq-q {
                 display: flex;
                 flex:1;
+                box-sizing: border-box;
+                text-decoration: none;
                 padding: min(28px, 1.772vw) min(61px, 3.861vw) min(28px, 1.772vw) min(36px, 2.278vw);
                 position: relative;
                 width: 100%;
                 font-size: min(24px, 1.519vw);
+                line-height: min(50px, 3.165vw);
                 font-weight: 700;
                 text-align: left;
                 color: #401605;
                 cursor: pointer;
                     @include media(md) {
                         align-items: flex-start;
-                        font-size: min(32px, 3.125vw);
+                        font-size: min(36px, 3.516vw);
                         line-height: min(50px, 4.883vw);
                         padding: min(28px, 2.734vw) min(90px, 8.789vw) min(28px, 2.734vw) min(30px, 2.930vw);
                     }
@@ -1586,8 +1576,9 @@ $breakpoints: (
                     content: "Q.";
                     display: inline-block;
                     padding-right: min(35px, 2.215vw);
-                    font-weight: 700;
                     font-size: min(28px, 1.772vw);
+                    line-height: min(50px, 3.165vw);
+                    font-weight: 700;
                     color: #b94c09;
                     @include media(md) {
                         font-size: min(36px, 3.516vw);
@@ -1598,16 +1589,17 @@ $breakpoints: (
                     content: "";
                     position: absolute;
                     right: min(61px, 3.861vw);
+                    transform: translateY(-50%);
                     top: 50%;
-                    width: min(16px, 1.013vw);
-                    height: min(16px, 1.013vw);
-                    border-right: 3px solid #b94c09;
-                    border-bottom: 3px solid #b94c09;
-                    transform: translateY(-75%) rotate(45deg);
-                    transition: transform 0.2s;
+                    width: min(25px, 1.582vw) ;
+                    height: min(25px, 1.582vw) ;
+                    background-position: center center;
+                    background-image: url('../image/sec10_arr.png');
+                    background-size: 100%;
+                    background-repeat: no-repeat;
                     @include media(md) {
-                        width: min(16px, 1.562vw);
-                        height: min(16px, 1.562vw);
+                        width: min(26px, 2.539vw);;
+                        height: min(26px, 2.539vw);;
                     }
                 }
             }
@@ -1624,10 +1616,10 @@ $breakpoints: (
                 padding: 0;
                 opacity: 0;
                 transition: padding 0.3s ease, opacity 0.3s ease;
-                    @include media(md) {
-                        font-size: min(32px, 3.125vw);
-                        line-height: min(44px, 4.297vw);
-                    }
+                @include media(md) {
+                    font-size: min(36px, 3.516vw);
+                    line-height: min(60px, 5.859vw) ;
+                }
                 &::before {
                     content: "A.";
                     display: inline-block;
@@ -1636,8 +1628,8 @@ $breakpoints: (
                     font-size: min(28px, 1.772vw);
                     color: #b94c09;
                     @include media(md) {
-                        font-size: min(32px, 3.125vw);
-                        line-height: min(44px, 4.297vw);
+                        font-size: min(36px, 3.516vw);
+                        line-height: min(60px, 5.859vw);
                     }
                 }
                 .faq-a__text {
@@ -1648,8 +1640,8 @@ $breakpoints: (
                     font-weight: 400;
                     color: #401605;
                     @include media(md) {
-                        font-size: min(32px, 3.125vw);
-                        line-height: min(44px, 4.297vw);
+                        font-size: min(36px, 3.516vw);
+                        line-height: min(60px, 5.859vw);
                     }
                     small {
                         font-size: min(17px, 1.076vw);
@@ -1682,6 +1674,7 @@ $breakpoints: (
                             font-size: min(26px, 2.539vw);
                             padding-left: min(32px, 3.125vw);
                             background-size: min(30px, 2.930vw);
+                            background-position: right min(30px, 2.930vw) top 50%;
                             width: min(260px, 25.391vw); 
                             height: min(72px, 7.031vw);
                             line-height: min(69px, 6.738vw);
@@ -1692,7 +1685,7 @@ $breakpoints: (
             .faq-item.on {
                 grid-template-rows: auto 1fr;
                 .faq-q::after {
-                    transform: translateY(-25%) rotate(-135deg);
+                    transform: translateY(-34%) rotate(180deg);
                 }
                 .faq-a {
                     opacity: 1;
